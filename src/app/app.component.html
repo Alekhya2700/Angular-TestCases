@@ -28,7 +28,7 @@
       <button class="btn btn-success" (click)="showAddUserForm()">Add New User</button>
 
       <div class="mt-4">
-        <form *ngIf="userForm">
+        <form *ngIf="userForm" id="newUserForm">
           <h2>Add New User</h2>
           <p>First Name: <input type="text" name="firstName" [(ngModel)]="newUser.firstName" /></p>
           <p>Last Name: <input type="text" name="lastName" [(ngModel)]="newUser.lastName" /></p>
@@ -38,7 +38,7 @@
           </p>
         </form>
 
-        <form *ngIf="editUserForm">
+        <form *ngIf="editUserForm" id="editUserForm">
           <h2>Edit User Details</h2>
           <p>First Name: <input type="text" name="firstName" [(ngModel)]="editedUser.firstName" /></p>
           <p>Last Name: <input type="text" name="lastName" [(ngModel)]="editedUser.lastName" /></p>
